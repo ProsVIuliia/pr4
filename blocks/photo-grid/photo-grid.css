@@ -1,0 +1,27 @@
+.photo-grid {
+  display: grid;
+  list-style-type: none;
+  padding: 0;
+  grid-template-columns: repeat(3, 282px);
+  -moz-column-gap: 17px;
+       column-gap: 17px;
+  gap: 20px 17px;
+  margin: 0;
+  justify-items: center;
+  line-height: 0;
+  margin: 51px 0 0;
+}
+  
+@media screen and (max-width: 880px) {
+    .photo-grid {
+      grid-template-columns: repeat(2, calc(50% - 17px / 2) );
+    }
+}
+  
+@media screen and (max-width: 600px) {
+  .photo-grid {
+    grid-template-columns: minmax(282px, 1fr);
+    margin: 38px auto;
+  }
+}
+
